@@ -6,10 +6,17 @@
 **Ext HW**  
     Tumbler Robot
     
-### user interface  
-Die uC-Programme werden über das One-Button-Menü oder SvVis-Commands ( SvProtokol ) parametriert und gesteuert.  
+### User interface  
+Die uC-Programme werden über das One-Button-Menü oder SvVis-Commands ( *SvProtocol* ) parametriert und gesteuert.  
 Online-Werte werden über SvVis-Kanäle visualisiert.  
 Ein SvVis konformes printf steht zur verfügung.  
 SvVis3 wird als standart Oberfläche zum Betrieb der uC-Programme verwendet.  
 Für manche Übungen werden eigene GUI's in Python oder C# erstellt.  
-Die eigenen GUI's kommunizieren über SvProtokol mit dem uC
+Die eigenen GUI's kommunizieren über *SvProtocol* mit dem uC
+
+### Basics1
+- uC Template-App zur Verwendung von *SvProtocol* und SvVis.  
+  das HelloWorld für alle weiteren uC-Apps
+- MPU-Daten ( Acc/Gyro ) vom Treiber lesen und im SvVis darstellen und analysieren.  
+  TP-Filterung besprechen und demonstrieren.
+- Eigene GUI mit *SvProtocol*. Verwendung des Templates SvVisMinni.cs
