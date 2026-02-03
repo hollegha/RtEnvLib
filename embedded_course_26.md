@@ -45,7 +45,7 @@ Anzeige der Acc-Wasserwage auf dem Led-Strip
 - Search and Follow mit US-Sensor
 
 ### Regelung
-- RateLimiter Classe
+- RateLimiter Klasse
 - Position Control Example
 - Gyro Integrator Example ( um die Fahrtrichtung zu bestimmen )
 - Angle Controller ( Fahrtrichtung )
