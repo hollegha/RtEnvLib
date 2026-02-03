@@ -19,4 +19,18 @@ Die eigenen GUI's kommunizieren über *SvProtocol* mit dem uC
   das HelloWorld für alle weiteren uC-Apps
 - MPU-Daten ( Acc/Gyro ) vom Treiber lesen und im SvVis darstellen und analysieren.  
   TP-Filterung besprechen und demonstrieren.
-- Eigene GUI mit *SvProtocol*. Verwendung des Templates SvVisMinni.cs
+- Eigene GUI mit *SvProtocol*. Verwendung des Templates SvVisMinni.cs oder SvVisMinni.py
+- Projekt 2-Dim Wasserwaage.  
+  Cursor in der GUI mit Acc-Sensor steuern  
+  
+### Led-Strip
+Auf dem Tumbler-Board befindet sich ein LED-Strip ( 8-RGB Leds ),  
+welche einzeln mit Farbe, Helligkeit, und Kontrast angesteuert werden können.  
+Damit sind der Fantasie keine Grenzen mehr gesetzt.
+In FSST 
+
+
+
+
+
+
