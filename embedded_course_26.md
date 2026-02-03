@@ -1,6 +1,6 @@
 ### Kursinhalt embdded software 2026
 
-### Allgemeines  
+### Hardware  
 **Basic HW**  
    Esp32 board mit MPU6050  
 **Ext HW**  
@@ -14,7 +14,7 @@ SvVis3 wird als standart Oberfläche zum Betrieb der uC-Programme verwendet.
 Für manche Übungen werden eigene GUI's in Python oder C# erstellt.  
 Die eigenen GUI's kommunizieren über *SvProtocol* mit dem uC
 
-### Basics1
+### Basics
 - uC Template-App zur Verwendung von *SvProtocol* und SvVis.  
   das HelloWorld für alle weiteren uC-Apps
 - MPU-Daten ( Acc/Gyro ) vom Treiber lesen und im SvVis darstellen und analysieren.  
@@ -36,6 +36,24 @@ Anzeige der Acc-Wasserwage auf dem Led-Strip
 - Ausgabe von Echtzeit Audiosignalen ( Fs=20kHz )
 - Digitale Filterung der FG-Signale
 - Fourier-Synthese
+
+### Motor und Encoder
+- Funktion `void DriveDistance(pow, distTicks) void Turn(pow, distTicks)`  
+  damit Rechteck fahren
+- Mit US-Sensor bis zur Wand umdrehen . . .
+- Mit US-Sensor Abstand halten
+- Search and Follow mit US-Sensor
+
+
+
+
+
+
+
+
+
+
+
 
 
 
