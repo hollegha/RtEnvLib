@@ -54,7 +54,11 @@ Anzeige der Acc-Wasserwage auf dem Led-Strip
 - Mithilfe des Angle Controllers eine Abfolge von Geraden und Kurven fahren,
   mit varibler Geschwindigkeit.
 - Trapetzförmiges Geschwindigkeits-Profil mit RPM und Angle Controller
-  
+
+### FSST Matura Pool
+- Acc-Sensor Cursor-Steuerung uC und C# oder Python
+- Alle Regelungs Beispiele
+- Alle Regelung Anwendungs Beispiele
 
 
 
