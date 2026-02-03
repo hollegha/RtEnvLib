@@ -60,6 +60,8 @@ Anzeige der Acc-Wasserwage auf dem Led-Strip
 - Alle Regelungs Beispiele
 - Alle Regelung Anwendungs Beispiele
 - FuncGen und Filters
+- Gyro-Integrator am uC Richtungsanzeige mit GUI
+  
   
 
 
