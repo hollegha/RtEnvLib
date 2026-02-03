@@ -26,9 +26,16 @@ Die eigenen GUI's kommunizieren über *SvProtocol* mit dem uC
 ### Led-Strip
 Auf dem Tumbler-Board befindet sich ein LED-Strip ( 8-RGB Leds ),  
 welche einzeln mit Farbe, Helligkeit, und Kontrast angesteuert werden können.  
-Damit sind der Fantasie keine Grenzen mehr gesetzt.
+Damit sind der Fantasie keine Grenzen mehr gesetzt.  
 **Matura Pool:**  
 Anzeige der Acc-Wasserwage auf dem Led-Strip
+
+### FuncGen und Filters
+- Effiziente Rect, Triangle, Sine Funktionsgenerator Objekte.
+- Analyse der Funktionen mit SvVis ( Fs=100Hz )
+- Ausgabe von Echtzeit Audiosignalen ( Fs=20kHz )
+- Digitale Filterung der FG-Signale
+- Fourier-Synthese
 
 
 
