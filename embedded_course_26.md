@@ -59,6 +59,8 @@ Anzeige der Acc-Wasserwage auf dem Led-Strip
 - Acc-Sensor Cursor-Steuerung uC und C# oder Python
 - Alle Regelungs Beispiele
 - Alle Regelung Anwendungs Beispiele
+- FuncGen und Filters
+  
 
 
 
