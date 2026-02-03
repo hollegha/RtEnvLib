@@ -45,11 +45,16 @@ Anzeige der Acc-Wasserwage auf dem Led-Strip
 - Search and Follow mit US-Sensor
 
 ### Regelung
+- RateLimiter Classe
 - Position Control Example
 - Gyro Integrator Example ( um die Fahrtrichtung zu bestimmen )
 - Angle Controller ( Fahrtrichtung )
 
-
+### Regelung Anwendung
+- Mithilfe des Angle Controllers eine Abfolge von Geraden und Kurven fahren,
+  mit varibler Geschwindigkeit.
+- Trapetzförmiges Geschwindigkeits-Profil mit RPM und Angle Controller
+  
 
 
 
