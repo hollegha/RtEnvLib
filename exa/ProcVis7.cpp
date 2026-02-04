@@ -42,10 +42,11 @@ extern "C" void app_main(void)
 {
   printf("ProcVis7\n");
   InitRtEnvHL();
-  // InitUart(UART_NUM_0, 500000);
-  InitSoftAp("sepp", 4);
+  InitUart(UART_NUM_0, 500000);
+  // InitSoftAp("sepp", 4);
   xTaskCreate(Monitor, "Monitor", 2048, NULL, 10, NULL); // 10=Prio
   CommandLoop();
 }
+
 
 
