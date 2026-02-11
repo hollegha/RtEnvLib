@@ -5,7 +5,7 @@
 #include "MPU_Esp.h"
 
 SvProtocol3 ua0;
-MPU6050 mpu;
+extern MPU6050 mpu;
 int dispMode = 1;
 bool monOn = true;
 
@@ -75,3 +75,4 @@ extern "C" void app_main(void)
   xTaskCreate(Monitor, "Monitor", 2048, NULL, 10, NULL);
   CommandLoop();
 }
+
