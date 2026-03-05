@@ -3,6 +3,10 @@
 
 #include "math.h"
 
+const int x_idx = 0;
+const int y_idx = 1;
+const int z_idx = 2;
+
 class Tp1Ord;
 class Tp2OrdF;
 
