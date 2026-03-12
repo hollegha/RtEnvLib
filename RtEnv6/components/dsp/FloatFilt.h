@@ -43,6 +43,19 @@ public:
     xd1 = xd2 = yd2 = yn = 0;
   }
 
+  // 0..4
+  void setFg(int idx)
+  {
+    switch (idx) {
+      case 0: Init(TP_COE_p010); break;
+      case 1: Init(TP_COE_p025); break;
+      case 2: Init(TP_COE_p04);  break;
+      case 3: Init(TP_COE_p05);  break;
+      case 4: Init(TP_COE_p100); break;
+      default: Init(TP_COE_p010); break;
+    }
+  }
+
   float CalcOneStep(float aX)
   {
     float accu;
