@@ -12,7 +12,7 @@ void LibVers()
   printf("RtEnvHL V2.1\n");
 }
 
-void InitRtEnvHL()
+void InitRtEnvHL(bool doBink)
 {
   LibVers();
   SvProtocol3::Init();
@@ -20,8 +20,10 @@ void InitRtEnvHL()
   openRtEnvStore();
   CheckNodeLock();
   closeRtEnvStore();
-  leds.Init();
-  leds.blink(0, 7, H_GREEN2, 3);
+  if (doBink) {
+    leds.Init();
+    leds.blink(0, 7, H_GREEN2, 3);
+  }
 }
 
 void MyDelay(int aMSec)

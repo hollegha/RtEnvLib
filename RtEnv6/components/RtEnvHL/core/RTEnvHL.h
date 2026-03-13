@@ -10,7 +10,7 @@
 #include "TimerHL.h"
 
 void LibVers();
-void InitRtEnvHL();
+void InitRtEnvHL(bool doBink=true);
 
 void MyDelay(int aMSec);
 
