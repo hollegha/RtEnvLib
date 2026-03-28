@@ -35,7 +35,7 @@ void PrintMac(const char* aTxt, uint8_t addr[])
 
 void InitNVS()
 {
-  printf("InitNVS\n");
+  // printf("InitNVS\n");
   esp_err_t ret = nvs_flash_init();
   if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
     ESP_ERROR_CHECK(nvs_flash_erase());
