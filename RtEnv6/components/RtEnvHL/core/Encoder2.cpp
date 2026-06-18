@@ -50,7 +50,7 @@ Encoder2::Encoder2(int aInt, int aDir)
   _intrPin = aInt; _dirPin = aDir; inv = false;
   actDir = 1;
   cnt = 0; _t1 = 0; pw = 0x0FFFFFF;
-  _runFlag = 0; filtOn = true;
+  _runFlag = 0; filtOn = true; igCnt = 0;
   z1 = z2 = z3 = diff = 0; info = 0;
   _filt = new Tp2OrdF();
   _filt->Init(TP_COE_p010);
@@ -89,13 +89,18 @@ void Encoder2::setBW(int aFiltNum)
 
 void Encoder2::ISRFunction()
 {
+  checkDir(); // HL - Hack
   _runFlag = 1;
   int64_t t2 = esp_timer_get_time();
   int64_t actPw = t2 - _t1;
   _t1 = t2;
 
-  if (frequDiff(pw, actPw) > 100)
-    return;
+  /* if (frequDiff(pw, actPw) > 100) {
+    igCnt++;
+    if (igCnt < 3)
+      return;
+    igCnt = 0;
+  } */
   
   info = 0;
   if (IsFrequLow(pw)) {
@@ -107,7 +112,7 @@ void Encoder2::ISRFunction()
   if (actPw < 600) // ignore short pw
     return;
   pw = actPw;
-  checkDir();
+  // checkDir(); HL-Hack
 }
 
 void Encoder2::CalcFilt2()

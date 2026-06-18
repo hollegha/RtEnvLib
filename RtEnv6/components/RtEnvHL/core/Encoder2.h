@@ -67,6 +67,7 @@ private:
   bool filtOn;
   int64_t _t1;
   uint32_t _runFlag;
+  int igCnt;
   Tp2OrdF* _filt;
   float z1, z2, z3;
 public:
