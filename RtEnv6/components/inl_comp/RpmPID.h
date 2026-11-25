@@ -3,6 +3,7 @@
 
 #include "ControlBasics.h"
 #include "EspMotor.h"
+#include "OdoParam.h"
 
 class RpmPID {
 public:
@@ -40,6 +41,10 @@ public:
     const float DT = 1.0 / 300.0;
 
     rl.CalcOneStep();
+    if (fabs(rl.out) < 90) { // rgl erst ab 200
+      out = rl.out * 1E-3;
+      return;
+    }
     float abw = rl.out - aSensVal;
 
     diff = abw - z3;
@@ -70,7 +75,8 @@ public:
 };
 
 
-PIDParam rpmPara(3.0E-3, 1.0E-4, 2.0E-2, 0.0, "rpm");
+// PIDParam rpmPara(2.0E-3, 1.0E-4, 2.0E-2, 0.0, "rpm");
+PIDParam rpmPara(RPM_KP, RPM_KD, RPM_KI, 0.0, "rpm");
 
 RpmPID rpmCL(&rpmPara), rpmCR(&rpmPara);
 
@@ -85,18 +91,18 @@ void ControlParams(int cmd)
   }
   if (cmd == 201) {
     int num = ua0.ReadI16();
-    ua0.LockOStream();
+    ua0.acqON=0; vTaskDelay(3); // lock monitor
     ua0.WrB(200);
     rpmPara.WriteCOM(&ua0);
     ua0.Flush();
-    ua0.UnlockOStream();
+    ua0.acqON=1; // unlock monitor
     ua0.SvMessage("Get PID");
   }
 }
 
 void InitRpmPID()
 {
-  rpmPara.rate = 900;
+  rpmPara.rate = RPM_RATE;
   rpmCL.rl.SetRateSec(rpmPara.rate);
   rpmCR.rl.SetRateSec(rpmPara.rate);
 }
