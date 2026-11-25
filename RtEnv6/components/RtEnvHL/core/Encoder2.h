@@ -63,7 +63,7 @@ public:
   }
 private:
   int _dirPin, _intrPin;
-  float actDir;
+  int actDir;
   bool filtOn;
   int64_t _t1;
   uint32_t _runFlag;

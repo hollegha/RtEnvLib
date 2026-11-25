@@ -3,6 +3,7 @@
 #include "FloatFilt.h"
 #include "Features.h"
 #include "Encoder2.h"
+#include "Odom.h"
 
 
 static void IRAM_ATTR encoder_isr(void* arg)
@@ -90,6 +91,7 @@ void Encoder2::setBW(int aFiltNum)
 void Encoder2::ISRFunction()
 {
   checkDir(); // HL - Hack
+  odom.odomCB(this);
   _runFlag = 1;
   int64_t t2 = esp_timer_get_time();
   int64_t actPw = t2 - _t1;
@@ -109,7 +111,7 @@ void Encoder2::ISRFunction()
       return;
   }
   
-  if (actPw < 600) // ignore short pw
+  if (actPw < 600) // ignore short pw 1600 Hz
     return;
   pw = actPw;
   // checkDir(); HL-Hack
